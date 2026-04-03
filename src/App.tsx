@@ -2,6 +2,7 @@ import React, {FC} from 'react';
 import './App.css';
 import { Person } from './components/Person';
 import { Human } from './components/Human';
+import { Dog } from './components/Dog';
 
 
 // type FC -> Functional Component
@@ -12,6 +13,7 @@ const App: FC = () => {
     <div className="App">
       <Person name='Bob' email='bob@bobr.ru' age={25} />
       <Human legs={3} arms={2} nuts />
+      <Dog name="Ol' Yella" />
     </div>
   );
 }

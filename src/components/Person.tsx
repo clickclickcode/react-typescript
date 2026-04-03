@@ -10,6 +10,7 @@ export interface Props {
 }
 
 // non-destructured props example
+// note: does not work in functional components
 export const Person = (props: Props) => {
   return (
     <div>
