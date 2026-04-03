@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 import './App.css';
-import { Person } from './components/Person';
+import { Person, Haircolor } from './components/Person';
 import { Human } from './components/Human';
 import { Dog } from './components/Dog';
 
@@ -11,7 +11,7 @@ const App: FC = () => {
   const hello: string = 'Hello, motherfucker'
   return (
     <div className="App">
-      <Person name='Bob' email='bob@bobr.ru' age={25} />
+      <Person name='Bob' email='bob@bobr.ru' age={25} hairColor={Haircolor.Blonde} />
       <Human legs={3} arms={2} nuts />
       <Dog name="Ol' Yella" />
     </div>
