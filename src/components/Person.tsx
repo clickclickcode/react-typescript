@@ -23,6 +23,10 @@ export const Person = (props: Props) => {
 
     const [country, setCountry] = useState<string | null>(null)
 
+    // declaring type to narrow compatible values
+    type NameType = 'Bobr' | 'Cheese'
+    const nameForType: NameType = 'Bobr'
+
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setCountry(event.target.value)
     }
