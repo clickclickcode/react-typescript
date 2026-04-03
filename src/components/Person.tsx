@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, {useState} from 'react';
 
 // types for props/objects
 export interface Props {
@@ -12,11 +12,22 @@ export interface Props {
 // non-destructured props example
 // note: does not work in functional components
 export const Person = (props: Props) => {
-  return (
-    <div>
-      <h1> {props.name} </h1>
-      <h1> {props.email} </h1>
-      <h1> {props.age} </h1>
-    </div>
-  );
+
+    const [country, setCountry] = useState<string | null>(null)
+
+    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setCountry(event.target.value)
+    }
+
+    return (
+        <div>
+            <h1> {props.name} </h1>
+            <h1> {props.email} </h1>
+            <h1> {props.age} </h1>
+
+            <input placeholder='Type your country of origin...' onChange={handleChange}/>
+
+            {country}
+        </div>
+    );
 }
